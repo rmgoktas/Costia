@@ -7,11 +7,6 @@ struct HomeView: View {
                 .tabItem {
                     Label("Scan", systemImage: "magnifyingglass")
                 }
-
-            MyListView()
-                .tabItem {
-                    Label("MyList", systemImage: "list.bullet")
-                }
         }
     }
 }
