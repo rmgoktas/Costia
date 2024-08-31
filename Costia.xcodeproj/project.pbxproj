@@ -13,6 +13,7 @@
 		991F3AA42C78BBE500E1CC1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 991F3AA32C78BBE500E1CC1C /* Preview Assets.xcassets */; };
 		991F3AAB2C78CB7A00E1CC1C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AAA2C78CB7A00E1CC1C /* OnboardingView.swift */; };
 		991F3AAE2C78D6F100E1CC1C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AAD2C78D6F100E1CC1C /* HomeView.swift */; };
+		991F3AB82C82195000E1CC1C /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AB72C82195000E1CC1C /* SplashScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		991F3AA32C78BBE500E1CC1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		991F3AAA2C78CB7A00E1CC1C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		991F3AAD2C78D6F100E1CC1C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		991F3AB72C82195000E1CC1C /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				991F3AAA2C78CB7A00E1CC1C /* OnboardingView.swift */,
 				991F3AAD2C78D6F100E1CC1C /* HomeView.swift */,
+				991F3AB72C82195000E1CC1C /* SplashScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			files = (
 				991F3AAB2C78CB7A00E1CC1C /* OnboardingView.swift in Sources */,
 				991F3AAE2C78D6F100E1CC1C /* HomeView.swift in Sources */,
+				991F3AB82C82195000E1CC1C /* SplashScreenView.swift in Sources */,
 				991F3A9F2C78BBE400E1CC1C /* ContentView.swift in Sources */,
 				991F3A9D2C78BBE400E1CC1C /* CostiaApp.swift in Sources */,
 			);
