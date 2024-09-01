@@ -7,7 +7,7 @@ struct SplashScreenView: View {
     var body: some View {
         if isActive {
             if hasSeenOnboarding {
-                HomeView()
+                MainTabView()
             } else {
                 OnboardingView(hasSeenOnboarding: $hasSeenOnboarding)
             }
