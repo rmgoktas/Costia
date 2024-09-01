@@ -8,7 +8,7 @@ struct OnboardingView: View {
     var body: some View {
         VStack {
             if showWelcome {
-                Text("Welcome to Costia!")
+                Text("Hoş geldiniz !")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding()
@@ -22,7 +22,7 @@ struct OnboardingView: View {
                     }
             } else {
                 VStack {
-                    Text("Welcome to Costia!")
+                    Text("Costia")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .padding()
@@ -37,19 +37,19 @@ struct OnboardingView: View {
                 Spacer()
 
                 if currentStep == 0 {
-                    Text("Scan and compare prices easily. 🔍")
+                    Text("Ürünü tarayın ve fiyatları karşılaştırın. 🔍")
                         .font(.title)
                         .padding(.top, 50)
                         .transition(.slide)
                         .animation(.easeInOut(duration: 1.0), value: currentStep)
                 } else if currentStep == 1 {
-                    Text("Avoid checkout surprises. 🛒")
+                    Text("Öderken sürpriz yaşamayın. 🛒")
                         .font(.title)
                         .padding(.top, 50)
                         .transition(.slide)
                         .animation(.easeInOut(duration: 1.0), value: currentStep)
                 } else if currentStep == 2 {
-                    Text("Get started with Costia now! 🚀")
+                    Text("Bütçenizi Costia ile planlayın. 🚀")
                         .font(.title)
                         .padding(.top, 50)
                         .transition(.slide)
@@ -68,7 +68,7 @@ struct OnboardingView: View {
                         }
                     }
                 }) {
-                    Text(currentStep < 2 ? "Next" : "Get Started")
+                    Text(currentStep < 2 ? "Sonraki" : "Hemen başla !")
                         .foregroundColor(.white)
                         .padding()
                         .frame(maxWidth: .infinity)
