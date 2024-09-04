@@ -16,6 +16,7 @@
 		991F3AB82C82195000E1CC1C /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AB72C82195000E1CC1C /* SplashScreenView.swift */; };
 		991F3ABA2C84C86D00E1CC1C /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AB92C84C86D00E1CC1C /* ScanView.swift */; };
 		991F3ABE2C84CD3400E1CC1C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3ABD2C84CD3400E1CC1C /* HomeView.swift */; };
+		991F3AC12C873A2600E1CC1C /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AC02C873A2600E1CC1C /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		991F3AB72C82195000E1CC1C /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		991F3AB92C84C86D00E1CC1C /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		991F3ABD2C84CD3400E1CC1C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		991F3AC02C873A2600E1CC1C /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 		991F3A902C78BBE400E1CC1C = {
 			isa = PBXGroup;
 			children = (
+				991F3ABF2C873A1100E1CC1C /* Services */,
 				991F3AB02C78D81D00E1CC1C /* Model */,
 				991F3AAF2C78D81400E1CC1C /* ViewModel */,
 				991F3AAC2C78CB8800E1CC1C /* View */,
@@ -104,6 +107,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		991F3ABF2C873A1100E1CC1C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				991F3AC02C873A2600E1CC1C /* LocationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +189,7 @@
 			files = (
 				991F3AAB2C78CB7A00E1CC1C /* OnboardingView.swift in Sources */,
 				991F3ABE2C84CD3400E1CC1C /* HomeView.swift in Sources */,
+				991F3AC12C873A2600E1CC1C /* LocationService.swift in Sources */,
 				991F3AAE2C78D6F100E1CC1C /* MainTabView.swift in Sources */,
 				991F3AB82C82195000E1CC1C /* SplashScreenView.swift in Sources */,
 				991F3A9F2C78BBE400E1CC1C /* ContentView.swift in Sources */,
@@ -241,7 +253,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -298,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -320,6 +332,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs camera access to scan barcode and text.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "En yakın marketleri gösterebilmek için konum bilginizi kullanıyoruz.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Konumunuzu sürekli olarak kullanarak size daha iyi hizmet verebiliriz.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "En yakın marketleri gösterebilmek için konum bilginizi kullanıyoruz.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -350,6 +365,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs camera access to scan barcode and text.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "En yakın marketleri gösterebilmek için konum bilginizi kullanıyoruz.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Konumunuzu sürekli olarak kullanarak size daha iyi hizmet verebiliriz.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "En yakın marketleri gösterebilmek için konum bilginizi kullanıyoruz.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
