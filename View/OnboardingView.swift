@@ -63,7 +63,6 @@ struct OnboardingView: View {
                         if currentStep < 2 {
                             currentStep += 1
                         } else {
-                            // Onboarding tamamlandı, ana ekrana geçiş
                             hasSeenOnboarding = true
                         }
                     }
