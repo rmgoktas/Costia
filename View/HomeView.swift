@@ -23,7 +23,7 @@ struct HomeView: View {
             }) {
                 HStack {
                     Image(systemName: "magnifyingglass")
-                    Text("Tara")
+                    Text("Ürün Tara")
                         .font(.title2)
                         .fontWeight(.bold)
                 }
@@ -43,7 +43,7 @@ struct HomeView: View {
                 Text("En Yakın Marketler")
                     .font(.headline)
                     .fontWeight(.bold)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color.primary) 
                     .padding(.leading, 20)
                     .padding(.bottom, 10)
 
@@ -67,3 +67,4 @@ struct HomeView_Previews: PreviewProvider {
         HomeView(selectedTab: .constant(0))
     }
 }
+
