@@ -11,7 +11,7 @@ struct MainTabView: View {
                 }
                 .tag(0)
 
-            ScanView()
+            ScannerView()
                 .tabItem {
                     Label("Tara", systemImage: "magnifyingglass")
                 }
