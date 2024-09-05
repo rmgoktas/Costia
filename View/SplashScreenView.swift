@@ -20,7 +20,7 @@ struct SplashScreenView: View {
                     .transition(.scale)
                     .animation(.easeInOut(duration: 1.0), value: isActive)
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                             withAnimation {
                                 isActive = true
                             }
