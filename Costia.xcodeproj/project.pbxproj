@@ -19,6 +19,8 @@
 		991F3AC12C873A2600E1CC1C /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AC02C873A2600E1CC1C /* LocationService.swift */; };
 		991F3AC32C88A88200E1CC1C /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AC22C88A88200E1CC1C /* ScannerViewModel.swift */; };
 		991F3AC52C88ACF700E1CC1C /* DataScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AC42C88ACF700E1CC1C /* DataScannerView.swift */; };
+		991F3AC92C933C6000E1CC1C /* ProductSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AC82C933C6000E1CC1C /* ProductSearchView.swift */; };
+		991F3ACB2C93472C00E1CC1C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3ACA2C93472C00E1CC1C /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		991F3AC02C873A2600E1CC1C /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		991F3AC22C88A88200E1CC1C /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
 		991F3AC42C88ACF700E1CC1C /* DataScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerView.swift; sourceTree = "<group>"; };
+		991F3AC82C933C6000E1CC1C /* ProductSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchView.swift; sourceTree = "<group>"; };
+		991F3ACA2C93472C00E1CC1C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 				991F3AB92C84C86D00E1CC1C /* ScannerView.swift */,
 				991F3ABD2C84CD3400E1CC1C /* HomeView.swift */,
 				991F3AC42C88ACF700E1CC1C /* DataScannerView.swift */,
+				991F3AC82C933C6000E1CC1C /* ProductSearchView.swift */,
+				991F3ACA2C93472C00E1CC1C /* WebView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,9 +204,11 @@
 				991F3ABE2C84CD3400E1CC1C /* HomeView.swift in Sources */,
 				991F3AC12C873A2600E1CC1C /* LocationService.swift in Sources */,
 				991F3AAE2C78D6F100E1CC1C /* MainTabView.swift in Sources */,
+				991F3AC92C933C6000E1CC1C /* ProductSearchView.swift in Sources */,
 				991F3AC32C88A88200E1CC1C /* ScannerViewModel.swift in Sources */,
 				991F3AB82C82195000E1CC1C /* SplashScreenView.swift in Sources */,
 				991F3A9F2C78BBE400E1CC1C /* ContentView.swift in Sources */,
+				991F3ACB2C93472C00E1CC1C /* WebView.swift in Sources */,
 				991F3A9D2C78BBE400E1CC1C /* CostiaApp.swift in Sources */,
 				991F3ABA2C84C86D00E1CC1C /* ScannerView.swift in Sources */,
 			);
