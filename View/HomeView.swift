@@ -56,7 +56,7 @@ struct HomeView: View {
 
             Spacer()
         }
-        .background(Color(.systemGray6))
+        .background(Color(.black))
         .onAppear {
         }
     }
