@@ -16,6 +16,12 @@ struct MainTabView: View {
                     Label("Tara", systemImage: "magnifyingglass")
                 }
                 .tag(1)
+
+            CartView() // Sepetim view'i ekleyelim
+                .tabItem {
+                    Label("Sepetim", systemImage: "cart")
+                }
+                .tag(2)
         }
     }
 }
