@@ -17,7 +17,7 @@ struct MainTabView: View {
                 }
                 .tag(1)
 
-            CartView() // Sepetim view'i ekleyelim
+            CartView() 
                 .tabItem {
                     Label("Sepetim", systemImage: "cart")
                 }
