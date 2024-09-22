@@ -27,7 +27,6 @@
 		991F3AD32C9C3BFF00E1CC1C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AD22C9C3BFF00E1CC1C /* ImagePicker.swift */; };
 		991F3AD52C9C75A400E1CC1C /* AddProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AD42C9C75A400E1CC1C /* AddProductViewModel.swift */; };
 		991F3AD72C9C75E600E1CC1C /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3AD62C9C75E600E1CC1C /* CartViewModel.swift */; };
-		991F3ADE2C9C7A4D00E1CC1C /* AddProductTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3ADD2C9C7A4D00E1CC1C /* AddProductTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +51,6 @@
 		991F3AD22C9C3BFF00E1CC1C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		991F3AD42C9C75A400E1CC1C /* AddProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewModel.swift; sourceTree = "<group>"; };
 		991F3AD62C9C75E600E1CC1C /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
-		991F3ADD2C9C7A4D00E1CC1C /* AddProductTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +151,6 @@
 		991F3AD82C9C791900E1CC1C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				991F3ADD2C9C7A4D00E1CC1C /* AddProductTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -232,7 +229,6 @@
 				991F3AD52C9C75A400E1CC1C /* AddProductViewModel.swift in Sources */,
 				991F3AC52C88ACF700E1CC1C /* DataScannerView.swift in Sources */,
 				991F3ABE2C84CD3400E1CC1C /* HomeView.swift in Sources */,
-				991F3ADE2C9C7A4D00E1CC1C /* AddProductTest.swift in Sources */,
 				991F3AC12C873A2600E1CC1C /* LocationService.swift in Sources */,
 				991F3AAE2C78D6F100E1CC1C /* MainTabView.swift in Sources */,
 				991F3AD72C9C75E600E1CC1C /* CartViewModel.swift in Sources */,
