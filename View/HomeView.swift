@@ -4,6 +4,7 @@ import MapKit
 struct HomeView: View {
     @StateObject private var locationManager = LocationManager()
     @Binding var selectedTab: Int
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         VStack {
@@ -11,6 +12,7 @@ struct HomeView: View {
                 Text("Costia")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .foregroundColor(colorScheme == .dark ? .white : .black)
                 Spacer()
             }
             .padding(.top, 40)
@@ -43,7 +45,7 @@ struct HomeView: View {
                 Text("En Yakın Marketler")
                     .font(.headline)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.primary) 
+                    .foregroundColor(colorScheme == .dark ? .white : .black)
                     .padding(.leading, 20)
                     .padding(.bottom, 10)
 
@@ -56,15 +58,13 @@ struct HomeView: View {
 
             Spacer()
         }
-        .background(Color(.black))
-        .onAppear {
-        }
+        .background(colorScheme == .dark ? Color(UIColor.systemGray6) : Color.white)
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(selectedTab: .constant(0))
+            .preferredColorScheme(.dark)
     }
 }
-
