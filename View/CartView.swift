@@ -54,7 +54,7 @@ struct CartView: View {
                     }
                     .padding()
                     .fullScreenCover(isPresented: $showingAddItemView) {
-                        AddProductView(cartItems: $viewModel.cartItems)
+                        
                     }
                 }
                 .navigationBarItems(leading: Button(action: {

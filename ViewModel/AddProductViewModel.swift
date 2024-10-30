@@ -1,4 +1,4 @@
-import SwiftUI
+/*import SwiftUI
 
 class AddProductViewModel: ObservableObject {
     @Published var inputImage: UIImage?
@@ -15,4 +15,4 @@ class AddProductViewModel: ObservableObject {
         }
     }
 
-}
+}*/
