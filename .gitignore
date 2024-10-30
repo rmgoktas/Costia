@@ -6,3 +6,4 @@ build/
 
 # Ignore Xcode user data
 *.xcuserdata/
+Costia.xcodeproj/project.pbxproj
