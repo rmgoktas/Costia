@@ -1,0 +1,8 @@
+# Ignore Config file
+Config.plist
+
+# Ignore build files
+build/
+
+# Ignore Xcode user data
+*.xcuserdata/
