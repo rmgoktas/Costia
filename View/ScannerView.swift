@@ -24,13 +24,15 @@ struct ScannerView: View {
                     Text("Kamera erişimi isteniyor...")
                 }
             }
-            .navigationBarTitle("Tara", displayMode: .inline)
-            .navigationBarItems(leading: Button(action: {
-                presentationMode.wrappedValue.dismiss()
-            }) {
-                Image(systemName: "chevron.left")
-                    .foregroundColor(.blue)
-            })
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("")
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("Tara")
+                        .font(.headline)
+                        .foregroundColor(.primary)
+                }
+            }
             .onAppear {
                 Task {
                     await vm.requestDataScannerAccessStatus()
@@ -40,28 +42,18 @@ struct ScannerView: View {
     }
     
     private var mainView: some View {
-        DataScannerView(
-            recognizedItems: $vm.recognizedItems,
-            recognizedDataType: vm.recognizedDataType,
-            recognizesMultipleItems: vm.recognizesMultipleItems,
-            viewModel: vm
-        )
-        .background { Color.gray.opacity(0.3) }
-        .ignoresSafeArea()
-        .id(vm.dataScannerViewId)
-        .sheet(isPresented: .constant(true)) {
+        VStack {
+            DataScannerView(
+                recognizedItems: $vm.recognizedItems,
+                recognizedDataType: vm.recognizedDataType,
+                recognizesMultipleItems: vm.recognizesMultipleItems,
+                viewModel: vm
+            )
+            .background(Color.gray.opacity(0.3))
+            .ignoresSafeArea()
+            .id(vm.dataScannerViewId)
+            
             bottomContainerView
-                .background(.ultraThinMaterial)
-                .presentationDetents([.medium, .fraction(0.25)])
-                .presentationDragIndicator(.visible)
-                .interactiveDismissDisabled()
-                .onAppear {
-                    guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-                          let controller = windowScene.windows.first?.rootViewController?.presentedViewController else {
-                        return
-                    }
-                    controller.view.backgroundColor = .clear
-                }
         }
         .onChange(of: vm.scanType) { _ in
             vm.recognizedItems.removeAll()
@@ -92,9 +84,7 @@ struct ScannerView: View {
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 16) {
                     ForEach(vm.recognizedItems) { item in
-                        Button(action: {
-                            navigateToProductSearchView(item: item)
-                        }) {
+                        NavigationLink(destination: ProductSearchView(searchText: itemText(for: item))) {
                             switch item {
                             case .barcode(let barcode):
                                 Text(barcode.payloadStringValue ?? "Barkod bulunamadı.")
@@ -116,22 +106,14 @@ struct ScannerView: View {
         }
     }
     
-    private func navigateToProductSearchView(item: RecognizedItem) {
-        var searchText = ""
-        
+    private func itemText(for item: RecognizedItem) -> String {
         switch item {
         case .barcode(let barcode):
-            searchText = barcode.payloadStringValue ?? "Bilinmeyen barkod"
+            return barcode.payloadStringValue ?? "Bilinmeyen barkod"
         case .text(let text):
-            searchText = text.transcript
+            return text.transcript
         @unknown default:
-            searchText = "Bilinmeyen ürün"
-        }
-        
-        
-        let productSearchView = ProductSearchView(searchText: searchText)
-        if let window = UIApplication.shared.windows.first {
-            window.rootViewController = UIHostingController(rootView: productSearchView)
+            return "Bilinmeyen ürün"
         }
     }
 }
