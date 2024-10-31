@@ -46,5 +46,31 @@ class DataManager {
             }
         }.resume()
     }
-}
+    
+    func searchProducts(with query: String, completion: @escaping ([Product]) -> Void) {
+        guard let url = URL(string: "\(baseURL)/products?name_like=\(query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")") else {
+            return
+        }
 
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                print("Error fetching products: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+
+            do {
+                // ProductResponse yerine doğrudan Product dizisi olarak decode ediyoruz.
+                let products = try JSONDecoder().decode([Product].self, from: data)
+                // Arama sonucu için, ürün adında sorgulanan kelime var mı kontrol et
+                let filteredProducts = products.filter { product in
+                    product.name.lowercased().contains(query.lowercased())
+                }
+                completion(filteredProducts)
+            } catch {
+                print("Error decoding JSON: \(error)")
+            }
+        }
+        task.resume()
+    }
+
+}
