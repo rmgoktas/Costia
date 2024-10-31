@@ -6,7 +6,8 @@
 //
 import SwiftUI
 
-struct Market: Codable {
+struct Market: Codable, Identifiable, Equatable {
+    let id = UUID()
     let name: String
     let price: Double
 }

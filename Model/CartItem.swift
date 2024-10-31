@@ -1,10 +1,12 @@
 import SwiftUI
 
 struct CartItem: Identifiable {
-    let id = UUID()
-    let image: UIImage
-    let name: String
-    let quantity: Int
-    let unitPrice: Double
+    var id: UUID = UUID()
+    var productName: String
+    var marketName: String
+    var quantity: Int
+    var unitPrice: Double
+    var image: UIImage
 }
+
 
