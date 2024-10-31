@@ -28,7 +28,6 @@
 		9937C5352CD1AE9A00EFEA38 /* ProductSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9937C5342CD1AE8900EFEA38 /* ProductSearchViewModel.swift */; };
 		9937C5372CD1AF3200EFEA38 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9937C5362CD1AF3200EFEA38 /* DataManager.swift */; };
 		9937C53A2CD1B11200EFEA38 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9937C5392CD1B11200EFEA38 /* Config.plist */; };
-		9937C53C2CD280EB00EFEA38 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9937C53B2CD280E400EFEA38 /* ProductResponse.swift */; };
 		9937C53E2CD3EC3400EFEA38 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9937C53D2CD3EC2D00EFEA38 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +55,6 @@
 		9937C5342CD1AE8900EFEA38 /* ProductSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchViewModel.swift; sourceTree = "<group>"; };
 		9937C5362CD1AF3200EFEA38 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9937C5392CD1B11200EFEA38 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
-		9937C53B2CD280E400EFEA38 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		9937C53D2CD3EC2D00EFEA38 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,7 +138,6 @@
 		991F3AB02C78D81D00E1CC1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9937C53B2CD280E400EFEA38 /* ProductResponse.swift */,
 				9937C5322CD1ADD800EFEA38 /* Product.swift */,
 				9937C5302CD1ADBB00EFEA38 /* Market.swift */,
 				991F3ACC2C9C3B5B00E1CC1C /* CartItem.swift */,
@@ -248,7 +245,6 @@
 				991F3AC32C88A88200E1CC1C /* ScannerViewModel.swift in Sources */,
 				9937C5372CD1AF3200EFEA38 /* DataManager.swift in Sources */,
 				991F3AB82C82195000E1CC1C /* SplashScreenView.swift in Sources */,
-				9937C53C2CD280EB00EFEA38 /* ProductResponse.swift in Sources */,
 				991F3ACF2C9C3B7D00E1CC1C /* CartView.swift in Sources */,
 				9937C5332CD1ADDE00EFEA38 /* Product.swift in Sources */,
 				9937C53E2CD3EC3400EFEA38 /* ImageLoader.swift in Sources */,
