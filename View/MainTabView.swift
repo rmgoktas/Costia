@@ -2,6 +2,7 @@ import SwiftUI
 
 struct MainTabView: View {
     @State private var selectedTab = 0
+    @StateObject private var cartViewModel = CartViewModel()
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -16,8 +17,7 @@ struct MainTabView: View {
                     Label("Tara", systemImage: "magnifyingglass")
                 }
                 .tag(1)
-
-            CartView() 
+            CartView()
                 .tabItem {
                     Label("Sepetim", systemImage: "cart")
                 }
@@ -25,6 +25,3 @@ struct MainTabView: View {
         }
     }
 }
-
-
-
