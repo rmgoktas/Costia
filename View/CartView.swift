@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct CartView: View {
-    
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var viewModel: CartViewModel
+    @FocusState private var isSearchFocused: Bool
     @State private var showingAddItemView = false
     @State private var selectedItem: CartItem? = nil
     @State private var isItemExpanded = false
@@ -25,11 +25,16 @@ struct CartView: View {
                             .background(Color.gray.opacity(0.1))
                             .cornerRadius(8)
                             .padding(.horizontal)
+                            .focused($isSearchFocused)
+                            .onSubmit {
+                                isSearchFocused = false
+                            }
                         
                         Button(action: {
                             if !searchText.isEmpty {
                                 searchProducts(with: searchText)
                                 showingSearchResults = true
+                                isSearchFocused = false
                             } else {
                                 searchResults.removeAll()
                             }
@@ -40,7 +45,6 @@ struct CartView: View {
                                 .cornerRadius(8)
                         }
                     }
-                    
                     if viewModel.cartItems.isEmpty {
                         Text("Henüz ürün eklemediniz.")
                             .font(.headline)
@@ -89,6 +93,7 @@ struct CartView: View {
                 .sheet(isPresented: $showingSearchResults) {
                     searchResultsView
                 }
+                
                 
                 if isItemExpanded, let item = selectedItem {
                     Color.black.opacity(0.5)
@@ -146,6 +151,24 @@ struct CartView: View {
                 self.searchResults = results
             }
         }
+    }
+    
+    private func downloadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
+        guard let url = URL(string: urlString) else {
+            completion(nil)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data, let image = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    self.imageCache[urlString] = image
+                    completion(image)
+                }
+            } else {
+                completion(nil)
+            }
+        }.resume()
     }
     
     private var searchResultsView: some View {
@@ -262,19 +285,23 @@ extension CartView {
                 Button(action: {
                     guard let selectedMarket = selectedMarket else { return }
                     
-                    let newItem = CartItem(
-                        id: UUID(),
-                        productName: product.name,
-                        marketName: selectedMarket.name,
-                        quantity: selectedQuantity,
-                        unitPrice: selectedMarket.price,
-                        image: imageCache[product.imageURL] ?? UIImage()
-                    )
+                    // Add image download mechanism
+                    downloadImage(from: product.imageURL) { downloadedImage in
+                        let newItem = CartItem(
+                            id: UUID(),
+                            productName: product.name,
+                            marketName: selectedMarket.name,
+                            quantity: selectedQuantity,
+                            unitPrice: selectedMarket.price,
+                            image: downloadedImage ?? UIImage()
+                        )
+                        
+                        viewModel.addItem(newItem)
+                    }
                     
-                    viewModel.addItem(newItem)
                     showingAddItemView = false
                 }) {
-                    Text("Sepete Ekle") 
+                    Text("Sepete Ekle")
                         .padding()
                         .background(Color.blue)
                         .foregroundColor(.white)
