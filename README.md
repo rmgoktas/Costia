@@ -13,7 +13,6 @@ Quickly scan barcodes to instantly view actual prices, compare them, and manage 
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table of Contents
 
-- [Introduction](#introduction)
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Feedback](#feedback)
